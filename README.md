@@ -10,6 +10,8 @@ The dataset used for carrying out the experiments is taken from UCI machine lear
 We use the Python to implement the support vector machine algorithm. For solving the final objective function, we use the SMO algorithm to find the optimized weights. Unless specified, we train the support vector machine with iterations of 40, $C$ parameter of 0.6, tolerance of 0.001, and conduct a 5-fold cross-validation for each experiment.
 
 ## Pre-prosessing
+![Image](./hist.png#pic_center)
+
 As shown in Fig.[Image](./hist.png), since each attribute has different means and standard deviations,  we apply the linear normalization for better modeling. Moreover, we change labels with 0 to the value -1 for the convenience of the SVM training. 
 
 
