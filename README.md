@@ -15,32 +15,21 @@ We use the Python to implement the support vector machine algorithm. For solving
 As shown in Fig.[Image](./hist.png), since each attribute has different means and standard deviations,  we apply the linear normalization for better modeling. Moreover, we change labels with 0 to the value -1 for the convenience of the SVM training. 
 
 
+![Image](./parameter C.png#pic_center)
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.49\textwidth]{imgs/parameter C.png}
-	\caption{The ablation study of the parameter C using linear kernel.}\label{fig:fig_abalation_C}
-\end{figure}
 
 ## Abalation study of the parameter $C$
 In this subsection, we use the linear kernel to explore the influence of parameter $C$ in a range from $0.001$ to $3.0$. As shown in Fig.~\ref{fig:fig_abalation_C}, with the increase of the parameter $C$, the model performance has a upward trend. However, when the value of $C$ is higher than 0.5, the performance does not change too much.
 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.49\textwidth]{imgs/parameter degree.png}
-	\caption{The ablation study of the parameter degree using polynomial kernel.}\label{fig:fig_abalation_degree}
-\end{figure}
+![Image](./parameter degree.png#pic_center)
 
 
 ## Abalation study of the parameter degree
 Although the linear kernel can achieve around $97\%$ accuracy in this task, there exists much room for improvement. Since the linear kernel cannot learn the non-linear correlation of data, we further apply the polynomial kernel to train the model. As shown in Fig.~\ref{fig:fig_abalation_degree}, we perform the ablation for the degree in the polynomial kernel. We conduct the 5-fold cross-validation for the degree with the range from $0.0001$ to $10$. We can find that we can get the performance gains when increasing the degrees of the polynomial kernel. If the degree is near zero, the performance of recognition decrease rapidly. 
 
-\begin{figure}[t]
-	\centering
-	\includegraphics[width=0.49\textwidth]{imgs/parameter sigma.png}
-	\caption{The ablation study of the parameter $\sigma$ using Gaussian kernel.}\label{fig:fig_abalation_sigma}
-\end{figure}
+
+![Image](./parameter sigma.png#pic_center)
 
 
 # Abalation study of the parameter sigma
